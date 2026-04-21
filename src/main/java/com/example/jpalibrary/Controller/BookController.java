@@ -24,6 +24,9 @@ public class BookController {
         return bookService.getBookById(id);
     }
 
+    @GetMapping("/title/{title}")
+    public Book getBookByTitle(@PathVariable String title){return bookService.getBookByTitle(title);};
+
     @PostMapping
     public Book saveBook(@RequestBody Book newBook) {
         return bookService.postBook(newBook);

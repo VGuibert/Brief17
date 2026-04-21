@@ -21,6 +21,8 @@ public class BookService {
         return bookRepository.findBooksById(id);
     }
 
+    public Book getBookByTitle(String title) { return bookRepository.findBookByTitle(title);}
+
     public Book postBook(Book newBook) {
         if(newBook.getAvailable() == null){
             newBook.setAvailable(true);

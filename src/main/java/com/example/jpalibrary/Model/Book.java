@@ -1,14 +1,14 @@
 package com.example.jpalibrary.Model;
 
-import jakarta.annotation.Nonnull;
-import jakarta.annotation.Nullable;
 import jakarta.persistence.*;
 import lombok.Data;
+
+import java.util.List;
 
 
 @Data
 @Entity
-@Table(name="books")
+@Table(name = "books")
 public class Book {
 
     @Id
@@ -18,5 +18,8 @@ public class Book {
     private String title;
     private String description;
     private Boolean available;
-
+    @ManyToOne
+    private Category category;
+    @ManyToMany
+    private List<Author> author;
 }
