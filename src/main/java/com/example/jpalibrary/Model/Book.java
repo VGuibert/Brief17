@@ -16,7 +16,9 @@ public class Book {
     private Long id;
     @Column(nullable = false)
     private String title;
+    @Lob
     private String description;
+    @Column( columnDefinition = "BOOLEAN DEFAULT true")
     private Boolean available;
     @ManyToOne
     private Category category;
