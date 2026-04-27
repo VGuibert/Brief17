@@ -3,6 +3,7 @@ package com.example.jpalibrary.Controller;
 import com.example.jpalibrary.Model.Book;
 import com.example.jpalibrary.Services.BookService;
 import lombok.RequiredArgsConstructor;
+import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;

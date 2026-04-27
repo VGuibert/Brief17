@@ -4,6 +4,7 @@ import com.example.jpalibrary.Model.Book;
 import com.example.jpalibrary.Repositories.BookRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
+import org.springframework.web.bind.annotation.ExceptionHandler;
 
 import java.util.List;
 
@@ -18,7 +19,7 @@ public class BookService {
     }
 
     public Book getBookById(Long id) {
-        return bookRepository.findBooksById(id);
+        return bookRepository.findBookById(id);
     }
 
     public Book getBookByTitle(String title) { return bookRepository.findBookByTitle(title);}
